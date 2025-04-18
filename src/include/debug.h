@@ -82,7 +82,7 @@ extern int box86_x11glx;
 extern char* box86_libGL;
 #define LOG_NONE 0
 #define LOG_INFO 1
-#define LOG_DEBUG 1
+#define LOG_DEBUG 2
 #define LOG_NEVER 3
 #define LOG_VERBOSE 3
 

@@ -409,7 +409,7 @@ static size_t lib_cap = 0;
 
 library_t *NewLibrary(const char* path, box86context_t* context, elfheader_t* verneeded)
 {
-    printf_dump(LOG_DEBUG, "Trying to load \"%s\"\n", path);
+    printf_dump(LOG_INFO, "Trying to load \"%s\"\n", path);
     //library_t *lib = (library_t*)box_calloc(1, sizeof(library_t));
     if(cur_lib==lib_cap) {
         lib_brick_t *new_brick = calloc(1, sizeof(lib_brick_t));
@@ -493,6 +493,7 @@ library_t *NewLibrary(const char* path, box86context_t* context, elfheader_t* ve
     lib->gbridgemap = kh_init(bridgemap);
     lib->wbridgemap = kh_init(bridgemap);
     lib->lbridgemap = kh_init(bridgemap);
+    printf_dump(LOG_INFO, "Loaded as \"%s\"\n", lib->path);
 
     return lib;
 }
