@@ -493,7 +493,7 @@ library_t *NewLibrary(const char* path, box86context_t* context, elfheader_t* ve
     lib->gbridgemap = kh_init(bridgemap);
     lib->wbridgemap = kh_init(bridgemap);
     lib->lbridgemap = kh_init(bridgemap);
-    printf_dump(LOG_INFO, "Loaded as \"%s\"\n", lib->path);
+    printf_dump(LOG_INFO, "Loaded %s as \"%s\"\n", path, lib->path); 
 
     return lib;
 }
