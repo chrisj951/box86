@@ -440,6 +440,7 @@ library_t *NewLibrary(const char* path, box86context_t* context, elfheader_t* ve
             box_free(lib->path);
             initDummyLib(lib);
             //box_free(lib);
+            printf_dump(LOG_INFO, "Returning null for lib \"%s\"\n", path);
             return NULL;
         }
     }
@@ -449,6 +450,7 @@ library_t *NewLibrary(const char* path, box86context_t* context, elfheader_t* ve
             box_free(lib->path);
             initDummyLib(lib);
             //box_free(lib);
+            printf_dump(LOG_INFO, "Returning null for lib \"%s\"\n", path);
             return NULL;
         }
     }
@@ -458,6 +460,7 @@ library_t *NewLibrary(const char* path, box86context_t* context, elfheader_t* ve
             box_free(lib->path);
             initDummyLib(lib);
             //box_free(lib);
+            printf_dump(LOG_INFO, "Returning null for lib \"%s\"\n", path);
             return NULL;
         }
     }
@@ -488,6 +491,7 @@ library_t *NewLibrary(const char* path, box86context_t* context, elfheader_t* ve
         box_free(lib->path);
         initDummyLib(lib);
         //box_free(lib);
+        printf_dump(LOG_INFO, "Returning null for lib \"%s\"\n", path);
         return NULL;
     }
     lib->gbridgemap = kh_init(bridgemap);
